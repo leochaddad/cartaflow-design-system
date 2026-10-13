@@ -2,13 +2,13 @@
 
 @import './tokens.css';
 
-/* Semantic tokens switch automatically with the theme, so app code should almost never need dark:. */
+/* Dark is disabled by default (opt-in via data-theme). Semantic tokens switch on their own, so app code should almost never need dark:. */
 @custom-variant dark {
   &:where([data-theme='dark'], [data-theme='dark'] *) {
     @slot;
   }
   @media (prefers-color-scheme: dark) {
-    &:where(:root:not([data-theme='light']) *) {
+    &:where([data-theme='system'], [data-theme='system'] *) {
       @slot;
     }
   }

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 (2026-10-13)
+
+- Light is now the only active theme by default. The dark theme no longer follows the OS automatically; opt in with `data-theme="dark"` or `data-theme="system"`. The `dark:` Tailwind variant follows the same rule.
+
 ## 1.1.1 (2026-10-13)
 
 - Fix: `cf-card--interactive` no longer resets text color, which made text invisible on `cf-card--inverse`.

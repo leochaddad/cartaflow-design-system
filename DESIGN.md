@@ -14,7 +14,7 @@ Values live in `tokens/*.json` and compile to `dist/`. Never copy a hex code, si
 4. **Paper and ink.** Surfaces and borders come from the warm Papel scale. Text and icons come from the cool Marinho/Tinta scale. Do not mix them up: no navy borders on paper, no warm gray text.
 5. **One typeface.** Bricolage Grotesque for everything except code and OTP digits (system monospace). No second brand font, ever.
 6. **Contrast is a build step.** `npm run check` fails if any text pair drops below WCAG AA in either theme. Do not ship around it.
-7. **Both themes.** Every screen works in light and dark. Semantic tokens switch automatically; if you reach for `dark:` you are probably using the wrong token.
+7. **Light only, for now.** Light is the default and the only active theme on every product. The dark theme is maintained in the tokens (and still contrast-checked) but disabled: it applies only when a product opts in with `<html data-theme="dark">` or `data-theme="system"` (follows the OS). Use semantic tokens anyway, so dark keeps working if it is ever switched on.
 8. **The stamp is rare.** The perforated selo shape appears at most once per viewport: the logo, one hero badge, one verified state or one OTP code.
 9. **Honest claims.** No delivery times, tracking, SLAs, international prices or guarantees unless the operations team confirmed them in writing.
 10. **No em dashes** in any interface or marketing text, in either language.
@@ -49,7 +49,7 @@ Values live in `tokens/*.json` and compile to `dist/`. Never copy a hex code, si
 
 Full scales (red 50 to 950, navy 50 to 975, paper 0 to 900, ink, and the four status hues) are in `docs/tokens.md`.
 
-### Semantic roles (light / dark)
+### Semantic roles (light / dark, dark disabled by default)
 
 | Role | Token | Light | Dark |
 |---|---|---|---|
