@@ -1,0 +1,20 @@
+{
+  "$description": "Text styles. The ONLY allowed combinations of size, line height, tracking and weight. Fluid sizes go from 375 px to 1280 px viewports. Bricolage Grotesque uses font-optical-sizing: auto, so the opsz axis follows the size.",
+  "text": {
+    "$type": "typography",
+    "display":   { "$value": { "fontSize": "clamp(2.75rem, 1.6rem + 4.2vw, 4.5rem)", "lineHeight": "1", "letterSpacing": "-0.035em", "fontWeight": 800 }, "$description": "44 to 72 px. Hero headline only, once per page." },
+    "h1":        { "$value": { "fontSize": "clamp(2.25rem, 1.5rem + 2.8vw, 3.5rem)", "lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": 800 }, "$description": "36 to 56 px. Page title on non-hero pages." },
+    "h2":        { "$value": { "fontSize": "clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem)", "lineHeight": "1.1", "letterSpacing": "-0.025em", "fontWeight": 700 }, "$description": "28 to 40 px. Section titles." },
+    "h3":        { "$value": { "fontSize": "clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem)", "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": 700 }, "$description": "22 to 28 px. Sub-sections, feature titles." },
+    "h4":        { "$value": { "fontSize": "1.25rem", "lineHeight": "1.3", "letterSpacing": "-0.015em", "fontWeight": 600 }, "$description": "20 px. Card titles." },
+    "h5":        { "$value": { "fontSize": "1.0625rem", "lineHeight": "1.35", "letterSpacing": "-0.01em", "fontWeight": 600 }, "$description": "17 px. Small titles, table group titles." },
+    "lead":      { "$value": { "fontSize": "1.25rem", "lineHeight": "1.5", "letterSpacing": "-0.01em", "fontWeight": 400 }, "$description": "20 px. Hero and section intro paragraph, max 2 per page." },
+    "body-lg":   { "$value": { "fontSize": "1.125rem", "lineHeight": "1.6", "letterSpacing": "-0.005em", "fontWeight": 400 }, "$description": "18 px. Long-form reading (docs, articles)." },
+    "body":      { "$value": { "fontSize": "1rem", "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": 400 }, "$description": "16 px. Default text." },
+    "body-sm":   { "$value": { "fontSize": "0.875rem", "lineHeight": "1.5", "letterSpacing": "0.003em", "fontWeight": 400 }, "$description": "14 px. Dense UI, table cells, helper text." },
+    "caption":   { "$value": { "fontSize": "0.8125rem", "lineHeight": "1.45", "letterSpacing": "0.01em", "fontWeight": 400 }, "$description": "13 px. Captions, footnotes, metadata. Never smaller." },
+    "label":     { "$value": { "fontSize": "0.875rem", "lineHeight": "1.25", "letterSpacing": "0em", "fontWeight": 600 }, "$description": "14 px. Form labels, nav links, tabs." },
+    "overline":  { "$value": { "fontSize": "0.75rem", "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": 600, "textTransform": "uppercase" }, "$description": "12 px uppercase. Rare: at most once per page, never above every section." },
+    "code":      { "$value": { "fontSize": "0.875rem", "lineHeight": "1.65", "letterSpacing": "0em", "fontWeight": 400, "fontFamily": "{font.family.mono}" }, "$description": "14 px mono. Code blocks and inline code." }
+  }
+}

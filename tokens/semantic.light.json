@@ -1,0 +1,195 @@
+{
+  "$description": "Semantic tokens, light theme. Product code uses ONLY these. Keys must match semantic.dark.json exactly.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "page": {
+        "$value": "{color.paper.100}",
+        "$description": "Default page background (Papel postal)"
+      },
+      "subtle": {
+        "$value": "{color.paper.50}",
+        "$description": "Alternating section background"
+      },
+      "raised": {
+        "$value": "{color.paper.0}",
+        "$description": "Cards, inputs, popovers, menus"
+      },
+      "sunken": {
+        "$value": "{color.paper.200}",
+        "$description": "Wells, table headers, inline code"
+      },
+      "inverse": {
+        "$value": "{color.navy.900}",
+        "$description": "Marinho band, dark navy in BOTH themes: footer, dark feature bands. Pair with the reversed logo."
+      },
+      "brand": {
+        "$value": "{color.red.600}",
+        "$description": "Full red blocks. One per page at most."
+      },
+      "brand-subtle": {
+        "$value": "{color.red.50}",
+        "$description": "Soft red highlight panels"
+      },
+      "overlay": {
+        "$value": "rgba(11, 19, 36, 0.48)",
+        "$description": "Modal scrim"
+      },
+      "material": {
+        "$value": "rgba(246, 244, 239, 0.78)",
+        "$description": "Translucent nav and sheets, always with backdrop blur"
+      }
+    },
+    "border": {
+      "subtle": {
+        "$value": "{color.paper.300}"
+      },
+      "default": {
+        "$value": "{color.paper.400}"
+      },
+      "strong": {
+        "$value": "{color.paper.500}"
+      },
+      "input": {
+        "$value": "#918C82",
+        "$description": "Form control outlines. Passes 3:1 against raised surfaces (WCAG 1.4.11)."
+      },
+      "inverse": {
+        "$value": "{color.navy.700}"
+      },
+      "focus": {
+        "$value": "{color.navy.900}"
+      }
+    },
+    "text": {
+      "primary": {
+        "$value": "{color.navy.900}"
+      },
+      "secondary": {
+        "$value": "{color.ink.600}"
+      },
+      "tertiary": {
+        "$value": "{color.ink.400}",
+        "$description": "Disabled and decorative only. Never for information a user needs."
+      },
+      "placeholder": {
+        "$value": "{color.ink.500}"
+      },
+      "inverse": {
+        "$value": "{color.paper.100}"
+      },
+      "inverse-secondary": {
+        "$value": "{color.ink.300}"
+      },
+      "brand": {
+        "$value": "{color.red.700}",
+        "$description": "Red text on light surfaces (600 fails AA for small text)"
+      },
+      "link": {
+        "$value": "{color.red.700}"
+      },
+      "link-hover": {
+        "$value": "{color.red.800}"
+      },
+      "on-brand": {
+        "$value": "{color.white}"
+      }
+    },
+    "action": {
+      "primary": {
+        "$value": "{color.red.600}"
+      },
+      "primary-hover": {
+        "$value": "{color.red.700}"
+      },
+      "primary-active": {
+        "$value": "{color.red.800}"
+      },
+      "on-primary": {
+        "$value": "{color.white}"
+      },
+      "secondary": {
+        "$value": "{color.navy.900}"
+      },
+      "secondary-hover": {
+        "$value": "{color.navy.800}"
+      },
+      "secondary-active": {
+        "$value": "{color.navy.950}"
+      },
+      "on-secondary": {
+        "$value": "{color.paper.100}"
+      },
+      "ghost-hover": {
+        "$value": "rgba(20, 33, 61, 0.06)"
+      },
+      "ghost-active": {
+        "$value": "rgba(20, 33, 61, 0.10)"
+      }
+    },
+    "status": {
+      "success": {
+        "$value": "{color.green.700}"
+      },
+      "success-subtle": {
+        "$value": "{color.green.50}"
+      },
+      "success-border": {
+        "$value": "{color.green.100}"
+      },
+      "warning": {
+        "$value": "{color.amber.700}"
+      },
+      "warning-subtle": {
+        "$value": "{color.amber.50}"
+      },
+      "warning-border": {
+        "$value": "{color.amber.100}"
+      },
+      "danger": {
+        "$value": "{color.crimson.600}"
+      },
+      "danger-subtle": {
+        "$value": "{color.crimson.50}"
+      },
+      "danger-border": {
+        "$value": "{color.crimson.100}"
+      },
+      "info": {
+        "$value": "{color.blue.700}"
+      },
+      "info-subtle": {
+        "$value": "{color.blue.50}"
+      },
+      "info-border": {
+        "$value": "{color.blue.100}"
+      }
+    },
+    "selection": {
+      "bg": {
+        "$value": "{color.red.200}"
+      },
+      "fg": {
+        "$value": "{color.navy.900}"
+      }
+    }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "xs": {
+      "$value": "{shadow.xs}"
+    },
+    "sm": {
+      "$value": "{shadow.sm}"
+    },
+    "md": {
+      "$value": "{shadow.md}"
+    },
+    "lg": {
+      "$value": "{shadow.lg}"
+    },
+    "xl": {
+      "$value": "{shadow.xl}"
+    }
+  }
+}

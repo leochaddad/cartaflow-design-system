@@ -1,0 +1,10 @@
+/* Self-hosted Bricolage Grotesque (variable: opsz 12-96, wght 400-800), CartaFlow subset.
+   Next.js apps should load the same file with next/font/local instead of importing this file. */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../fonts/BricolageGrotesque-Variable.woff2') format('woff2-variations'),
+    url('../fonts/BricolageGrotesque-Variable.woff2') format('woff2');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "design-md": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/stitch-utilities/skills/design-md/SKILL.md",
+      "computedHash": "d3a4c7d2f2715a33662c8b06ffc16035d01965a8b4ed81c2958fb22ae94760f8"
+    },
+    "tailwind-design-system": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md",
+      "computedHash": "4e5bfe5af9b5da504752432dc45ed605af350cf1489a58419afad4123a514f89"
+    }
+  }
+}

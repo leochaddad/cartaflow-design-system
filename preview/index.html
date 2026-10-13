@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CartaFlow Design System</title>
+<link rel="icon" href="../logos/favicon/favicon.svg">
+<link rel="stylesheet" href="../dist/tokens.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<style>
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .sw { border-radius: 10px; height: 64px; border: 1px solid var(--cf-color-border-subtle); }
+  .meta { font: 500 12px/1.4 var(--cf-font-family-mono); color: var(--cf-color-text-secondary); margin-top: 6px; }
+  h2.cf-h3 { margin: 56px 0 20px; }
+  .two { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  .theme { position: fixed; right: 16px; top: 12px; z-index: 600; }
+</style>
+</head>
+<body>
+<header class="cf-nav"><div class="cf-container" style="height:100%;display:flex;align-items:center;justify-content:space-between">
+  <img src="../logos/svg/cartaflow-horizontal-primary.svg" alt="CartaFlow" style="height:28px">
+  <nav class="row" style="gap:4px"><a class="cf-nav__link" aria-current="page" href="#">Tokens</a><a class="cf-nav__link" href="#c">Componentes</a><button class="cf-btn cf-btn--outline cf-btn--sm" onclick="const r=document.documentElement;r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'">Tema</button></nav>
+</div></header>
+<main class="cf-container" style="padding-bottom:96px">
+  <section class="cf-section--compact" style="padding-top:64px">
+    <p class="cf-overline">Design system 1.0</p>
+    <h1 class="cf-display" style="margin-top:12px;max-width:14ch">Envie cartas pela internet.</h1>
+    <p class="cf-lead" style="margin-top:20px;max-width:46ch">Escreva ou envie um PDF. A CartaFlow imprime, envelopa e posta para qualquer endereço do Brasil.</p>
+    <div class="row" style="margin-top:32px"><a class="cf-btn cf-btn--primary cf-btn--xl" href="#">Enviar carta</a><a class="cf-btn cf-btn--outline cf-btn--xl" href="#">Ver preços</a></div>
+  </section>
+
+  <h2 class="cf-h3">Superfícies</h2>
+  <div class="grid" id="surfaces"></div>
+  <h2 class="cf-h3">Texto</h2>
+  <div class="two">
+    <div><p class="cf-h1">Título h1</p><p class="cf-h2" style="margin-top:12px">Título h2 da seção</p><p class="cf-h3" style="margin-top:12px">Subtítulo h3</p><p class="cf-h4" style="margin-top:12px">Título de card h4</p><p class="cf-h5" style="margin-top:12px">Título pequeno h5</p></div>
+    <div><p class="cf-body-lg">Corpo grande para leitura longa, como documentação e artigos sobre envio de correspondências.</p><p class="cf-body" style="margin-top:12px">Corpo padrão de 16 px. Cartas, envelopes, CEP e endereços.</p><p class="cf-body-sm" style="margin-top:12px">Texto pequeno para interface da plataforma e tabelas.</p><p class="cf-caption" style="margin-top:12px">Legenda e metadados, 13 px.</p><p style="margin-top:12px"><a class="cf-link" href="#">Um link no texto</a> e <code class="cf-code-inline">POST /v1/letters</code></p></div>
+  </div>
+
+  <h2 class="cf-h3" id="c">Botões</h2>
+  <div class="row"><button class="cf-btn cf-btn--primary">Enviar carta</button><button class="cf-btn cf-btn--secondary">Falar com vendas</button><button class="cf-btn cf-btn--outline">Ver preços</button><button class="cf-btn cf-btn--ghost">Cancelar</button><button class="cf-btn cf-btn--danger">Excluir</button><button class="cf-btn cf-btn--link">Saiba mais</button><button class="cf-btn cf-btn--primary" disabled>Desativado</button></div>
+  <div class="row" style="margin-top:12px"><button class="cf-btn cf-btn--primary cf-btn--sm">Pequeno</button><button class="cf-btn cf-btn--primary">Médio</button><button class="cf-btn cf-btn--primary cf-btn--lg">Grande</button><button class="cf-btn cf-btn--primary cf-btn--xl">Extra grande</button></div>
+
+  <h2 class="cf-h3">Formulário</h2>
+  <div class="two">
+    <div class="cf-field"><label class="cf-field__label" for="a">Nome do destinatário</label><input class="cf-input" id="a" placeholder="Maria Souza"><p class="cf-field__hint">Como aparece no envelope.</p></div>
+    <div class="cf-field"><label class="cf-field__label" for="b">CEP</label><input class="cf-input" id="b" value="0411" aria-invalid="true"><p class="cf-field__error">Informe um CEP com 8 dígitos.</p></div>
+    <div class="cf-field"><label class="cf-field__label" for="c2">Modalidade</label><select class="cf-select" id="c2"><option>Carta simples</option></select></div>
+    <div class="cf-field"><label class="cf-field__label" for="d">Mensagem</label><textarea class="cf-textarea" id="d" placeholder="Escreva sua carta"></textarea></div>
+  </div>
+
+  <h2 class="cf-h3">Cards, badges e callouts</h2>
+  <div class="two">
+    <div class="cf-card"><p class="cf-h4">Envio avulso</p><p class="cf-body-sm" style="margin-top:8px;color:var(--cf-color-text-secondary)">Para quem precisa enviar uma carta de vez em quando.</p><div class="row" style="margin-top:16px"><span class="cf-badge">Rascunho</span><span class="cf-badge cf-badge--brand">Pro</span><span class="cf-badge cf-badge--success">Postada</span><span class="cf-badge cf-badge--warning">Pendente</span><span class="cf-badge cf-badge--danger">Erro</span><span class="cf-badge cf-badge--info">Novo</span></div></div>
+    <a class="cf-card cf-card--interactive" href="#"><p class="cf-h4">Card interativo</p><p class="cf-body-sm" style="margin-top:8px;color:var(--cf-color-text-secondary)">Passe o mouse para ver a elevação.</p></a>
+    <div class="cf-card cf-card--sunken"><p class="cf-h4">Card rebaixado</p><p class="cf-body-sm" style="margin-top:8px;color:var(--cf-color-text-secondary)">Para agrupar dentro de outra superfície.</p></div>
+    <div class="cf-card cf-card--inverse"><p class="cf-h4">Faixa Marinho</p><p class="cf-body-sm" style="margin-top:8px;color:var(--cf-color-text-inverse-secondary)">Navy em ambos os temas.</p></div>
+  </div>
+  <div class="two" style="margin-top:16px">
+    <div class="cf-callout cf-callout--info"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="10" cy="10" r="8"/><path d="M10 9v5M10 6.2v.1" stroke-linecap="round"/></svg><div><p class="cf-callout__title">Prazos</p><p>Os prazos dependem da modalidade postal e do destino.</p></div></div>
+    <div class="cf-callout cf-callout--danger"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="10" cy="10" r="8"/><path d="M10 6v5M10 13.8v.1" stroke-linecap="round"/></svg><div><p class="cf-callout__title">Endereço incompleto</p><p>Falta o número do imóvel.</p></div></div>
+  </div>
+
+  <h2 class="cf-h3">Selo, ondas e código</h2>
+  <div class="row" style="gap:32px;align-items:flex-start">
+    <div class="cf-stamp" style="min-width:150px"><span class="cf-caption" style="color:inherit;opacity:.85">Código</span><span class="cf-h2 cf-tabular" style="color:inherit;font-family:var(--cf-font-family-mono);letter-spacing:.06em">482 917</span></div>
+    <div class="cf-stamp cf-stamp--navy cf-stamp--tilt"><span class="cf-h4" style="color:inherit">Verificado</span></div>
+    <div class="cf-stamp cf-stamp--paper"><span class="cf-h4">Mais escolhido</span></div>
+    <div style="flex:1;min-width:280px"><span class="cf-waves"></span><pre class="cf-code-block" style="margin-top:16px"><span class="tok-keyword">curl</span> -X POST /v1/letters \
+  -d <span class="tok-string">'{ "to": { "cep": "04117-000" } }'</span>
+<span class="tok-comment"># exemplo ilustrativo</span></pre></div>
+  </div>
+
+  <h2 class="cf-h3">Tabela</h2>
+  <div class="cf-table-wrap"><table class="cf-table"><thead><tr><th>Plano</th><th>Mais econômico</th><th data-align="end">Cartas por mês</th></tr></thead><tbody><tr><td>Free</td><td>Envios ocasionais</td><td data-align="end">até 33</td></tr><tr><td>Pro</td><td>Pequenas empresas</td><td data-align="end">34-266</td></tr><tr><td>Scale</td><td>Alto volume</td><td data-align="end">267 ou mais</td></tr></tbody></table></div>
+</main>
+<script>
+const S=['page','subtle','raised','sunken','inverse','brand','brand-subtle'];
+document.getElementById('surfaces').innerHTML=S.map(s=>`<div><div class="sw" style="background:var(--cf-color-surface-${s})"></div><div class="meta">surface-${s}</div></div>`).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "$description": "Component tokens. Fixed sizes so every product renders the same controls.",
+  "button": {
+    "height": { "$type": "dimension", "sm": { "$value": "32px" }, "md": { "$value": "40px" }, "lg": { "$value": "48px" }, "xl": { "$value": "56px" } },
+    "padding-x": { "$type": "dimension", "sm": { "$value": "12px" }, "md": { "$value": "16px" }, "lg": { "$value": "20px" }, "xl": { "$value": "24px" } },
+    "font-size": { "$type": "dimension", "sm": { "$value": "0.875rem" }, "md": { "$value": "0.9375rem" }, "lg": { "$value": "1rem" }, "xl": { "$value": "1.0625rem" } },
+    "icon-size": { "$type": "dimension", "sm": { "$value": "16px" }, "md": { "$value": "18px" }, "lg": { "$value": "20px" }, "xl": { "$value": "20px" } },
+    "gap": { "$type": "dimension", "$value": "8px" },
+    "radius": { "$type": "dimension", "$value": "{radius.md}" },
+    "font-weight": { "$type": "fontWeight", "$value": 600 },
+    "press-scale": { "$type": "number", "$value": 0.97 }
+  },
+  "input": {
+    "height": { "$type": "dimension", "sm": { "$value": "36px" }, "md": { "$value": "44px" }, "lg": { "$value": "52px" } },
+    "padding-x": { "$type": "dimension", "$value": "14px" },
+    "font-size": { "$type": "dimension", "$value": "1rem", "$description": "16 px minimum so iOS never zooms" },
+    "radius": { "$type": "dimension", "$value": "{radius.md}" }
+  },
+  "card": {
+    "padding": { "$type": "dimension", "sm": { "$value": "16px" }, "md": { "$value": "24px" }, "lg": { "$value": "32px" } },
+    "radius": { "$type": "dimension", "$value": "{radius.lg}" }
+  },
+  "badge": {
+    "height": { "$type": "dimension", "sm": { "$value": "20px" }, "md": { "$value": "24px" } },
+    "padding-x": { "$type": "dimension", "sm": { "$value": "8px" }, "md": { "$value": "10px" } },
+    "font-size": { "$type": "dimension", "$value": "0.8125rem" }
+  },
+  "nav": {
+    "height": { "$type": "dimension", "mobile": { "$value": "56px" }, "desktop": { "$value": "64px" } },
+    "blur": { "$type": "dimension", "$value": "16px" }
+  },
+  "focus": {
+    "width": { "$type": "dimension", "$value": "{border.focus}" },
+    "offset": { "$type": "dimension", "$value": "2px" }
+  },
+  "icon": {
+    "stroke": { "$type": "number", "$value": 1.75, "$description": "Lucide stroke width" },
+    "size": { "$type": "dimension", "sm": { "$value": "16px" }, "md": { "$value": "20px" }, "lg": { "$value": "24px" } }
+  },
+  "layout": {
+    "container": { "$type": "dimension", "prose": { "$value": "680px" }, "content": { "$value": "1200px" }, "wide": { "$value": "1320px" } },
+    "gutter": { "$type": "dimension", "mobile": { "$value": "16px" }, "tablet": { "$value": "24px" }, "desktop": { "$value": "32px" } },
+    "section-y": { "$type": "dimension", "mobile": { "$value": "64px" }, "desktop": { "$value": "96px" } },
+    "section-y-compact": { "$type": "dimension", "mobile": { "$value": "48px" }, "desktop": { "$value": "64px" } }
+  }
+}

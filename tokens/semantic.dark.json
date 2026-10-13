@@ -1,0 +1,184 @@
+{
+  "$description": "Semantic tokens, dark theme (Marinho night). Keys must match semantic.light.json exactly.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "page": {
+        "$value": "{color.navy.950}"
+      },
+      "subtle": {
+        "$value": "#0E1729"
+      },
+      "raised": {
+        "$value": "{color.navy.925}"
+      },
+      "sunken": {
+        "$value": "{color.navy.975}"
+      },
+      "inverse": {
+        "$value": "{color.navy.900}"
+      },
+      "brand": {
+        "$value": "{color.red.600}"
+      },
+      "brand-subtle": {
+        "$value": "#261824"
+      },
+      "overlay": {
+        "$value": "rgba(3, 6, 12, 0.64)"
+      },
+      "material": {
+        "$value": "rgba(11, 19, 36, 0.72)"
+      }
+    },
+    "border": {
+      "subtle": {
+        "$value": "#1A2640"
+      },
+      "default": {
+        "$value": "#24314F"
+      },
+      "strong": {
+        "$value": "#34446A"
+      },
+      "input": {
+        "$value": "#5A6788",
+        "$description": "Form control outlines. Passes 3:1 against raised surfaces (WCAG 1.4.11)."
+      },
+      "inverse": {
+        "$value": "{color.navy.700}"
+      },
+      "focus": {
+        "$value": "{color.paper.100}"
+      }
+    },
+    "text": {
+      "primary": {
+        "$value": "{color.paper.100}"
+      },
+      "secondary": {
+        "$value": "{color.ink.300}"
+      },
+      "tertiary": {
+        "$value": "#6E7790"
+      },
+      "placeholder": {
+        "$value": "#8C94A8"
+      },
+      "inverse": {
+        "$value": "{color.paper.100}"
+      },
+      "inverse-secondary": {
+        "$value": "{color.ink.300}"
+      },
+      "brand": {
+        "$value": "#F07A63"
+      },
+      "link": {
+        "$value": "#F07A63"
+      },
+      "link-hover": {
+        "$value": "#F59B88"
+      },
+      "on-brand": {
+        "$value": "{color.white}"
+      }
+    },
+    "action": {
+      "primary": {
+        "$value": "{color.red.600}"
+      },
+      "primary-hover": {
+        "$value": "{color.red.700}"
+      },
+      "primary-active": {
+        "$value": "{color.red.800}"
+      },
+      "on-primary": {
+        "$value": "{color.white}"
+      },
+      "secondary": {
+        "$value": "{color.paper.100}"
+      },
+      "secondary-hover": {
+        "$value": "{color.paper.200}"
+      },
+      "secondary-active": {
+        "$value": "{color.paper.300}"
+      },
+      "on-secondary": {
+        "$value": "{color.navy.900}"
+      },
+      "ghost-hover": {
+        "$value": "rgba(246, 244, 239, 0.07)"
+      },
+      "ghost-active": {
+        "$value": "rgba(246, 244, 239, 0.12)"
+      }
+    },
+    "status": {
+      "success": {
+        "$value": "{color.green.400}"
+      },
+      "success-subtle": {
+        "$value": "{color.green.950}"
+      },
+      "success-border": {
+        "$value": "#1C4A37"
+      },
+      "warning": {
+        "$value": "{color.amber.400}"
+      },
+      "warning-subtle": {
+        "$value": "{color.amber.950}"
+      },
+      "warning-border": {
+        "$value": "#4D3A17"
+      },
+      "danger": {
+        "$value": "{color.crimson.400}"
+      },
+      "danger-subtle": {
+        "$value": "{color.crimson.950}"
+      },
+      "danger-border": {
+        "$value": "#55222A"
+      },
+      "info": {
+        "$value": "{color.blue.400}"
+      },
+      "info-subtle": {
+        "$value": "{color.blue.950}"
+      },
+      "info-border": {
+        "$value": "#22375F"
+      }
+    },
+    "selection": {
+      "bg": {
+        "$value": "#5A2A2A"
+      },
+      "fg": {
+        "$value": "{color.paper.100}"
+      }
+    }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "xs": {
+      "$value": "{shadow-dark.xs}"
+    },
+    "sm": {
+      "$value": "{shadow-dark.sm}"
+    },
+    "md": {
+      "$value": "{shadow-dark.md}"
+    },
+    "lg": {
+      "$value": "{shadow-dark.lg}"
+    },
+    "xl": {
+      "$value": "{shadow-dark.xl}"
+    }
+  }
+}

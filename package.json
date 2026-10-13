@@ -1,0 +1,62 @@
+{
+  "name": "@cartaflow/design-system",
+  "version": "1.0.0",
+  "description": "CartaFlow design system: tokens, rules, components, fonts and every logo asset.",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    "./tokens.css": "./dist/tokens.css",
+    "./tailwind.css": "./dist/tailwind.css",
+    "./base.css": "./css/base.css",
+    "./components.css": "./css/components.css",
+    "./tokens": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
+    "./tokens.json": "./dist/tokens.json",
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "default": "./dist/react/index.js"
+    },
+    "./fonts/*": "./fonts/*",
+    "./logos/*": "./logos/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "css",
+    "fonts",
+    "logos",
+    "tokens",
+    "DESIGN.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "node scripts/build-tokens.mjs && node scripts/check-contrast.mjs && node scripts/build-react-logos.mjs && tsc -p tsconfig.json",
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "build:logos": "node scripts/build-logos.mjs",
+    "check": "node scripts/check-contrast.mjs",
+    "build:react-logos": "node scripts/build-react-logos.mjs"
+  },
+  "peerDependencies": {
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "pdfkit": "^0.20.2",
+    "png-to-ico": "^3.0.2",
+    "react": "^19.3.0",
+    "sharp": "^0.35.5",
+    "svg-to-pdfkit": "^0.1.8",
+    "typescript": "^5.9.3"
+  }
+}

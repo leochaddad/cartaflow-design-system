@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "declaration": true,
+    "outDir": "dist/react",
+    "rootDir": "react",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": false
+  },
+  "include": ["react/**/*.ts", "react/**/*.tsx"]
+}

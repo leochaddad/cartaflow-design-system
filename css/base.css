@@ -1,0 +1,137 @@
+/* CartaFlow base: element defaults. Requires dist/tokens.css (or dist/tailwind.css) first.
+   Lives in @layer base so Tailwind utilities and component classes can override it. */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-family: var(--cf-font-family-sans);
+    font-optical-sizing: auto;
+    font-synthesis-weight: none;
+    font-size: 100%;
+    line-height: var(--cf-text-body-line-height);
+    color: var(--cf-color-text-primary);
+    background-color: var(--cf-color-surface-page);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: calc(var(--cf-nav-height-desktop) + var(--cf-space-4));
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-size: var(--cf-text-body-size);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--cf-color-text-primary);
+    text-wrap: balance;
+  }
+
+  p, li, dd, figcaption, blockquote {
+    text-wrap: pretty;
+  }
+
+  p, ul, ol, dl, figure, blockquote, pre {
+    margin: 0;
+  }
+
+  img, svg, video, canvas, picture {
+    display: block;
+    max-width: 100%;
+  }
+
+  img, video {
+    height: auto;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  code, kbd, pre, samp {
+    font-family: var(--cf-font-family-mono);
+    font-size: 1em;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  ::selection {
+    background-color: var(--cf-color-selection-bg);
+    color: var(--cf-color-selection-fg);
+  }
+
+  :focus-visible {
+    outline: var(--cf-focus-width) solid var(--cf-color-border-focus);
+    outline-offset: var(--cf-focus-offset);
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Numbers that line up: prices, codes, tables */
+  .cf-tabular,
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cf-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .cf-skip-link {
+    position: absolute;
+    left: var(--cf-space-4);
+    top: var(--cf-space-2);
+    z-index: var(--cf-z-tooltip);
+    padding: var(--cf-space-2) var(--cf-space-4);
+    border-radius: var(--cf-radius-md);
+    background: var(--cf-color-action-secondary);
+    color: var(--cf-color-action-on-secondary);
+    font-weight: var(--cf-font-weight-semibold);
+    transform: translateY(-200%);
+  }
+
+  .cf-skip-link:focus {
+    transform: none;
+  }
+
+  /* Reduced motion: stop animations and smooth scrolling. Components drop their transforms too. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
