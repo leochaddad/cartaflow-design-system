@@ -335,6 +335,7 @@
   /* ---------- Code ---------- */
   .cf-code-block {
     position: relative;
+    contain: inline-size; /* long lines scroll inside the block instead of widening the layout */
     max-width: 100%;
     min-width: 0;
     margin: 0;
@@ -372,7 +373,8 @@
   .cf-kbd { display: inline-flex; align-items: center; min-width: 1.5em; height: 1.5em; padding-inline: 0.4em; border-radius: var(--cf-radius-xs); border: 1px solid var(--cf-color-border-strong); border-bottom-width: 2px; background: var(--cf-color-surface-raised); font-family: var(--cf-font-family-mono); font-size: 0.8125em; }
 
   /* ---------- Table ---------- */
-  .cf-table-wrap { overflow-x: auto; border: 1px solid var(--cf-color-border-default); border-radius: var(--cf-radius-lg); background-color: var(--cf-color-surface-raised); }
+  /* contain: inline-size keeps a wide table from widening its grid or flex parent; it scrolls instead. */
+  .cf-table-wrap { contain: inline-size; overflow-x: auto; border: 1px solid var(--cf-color-border-default); border-radius: var(--cf-radius-lg); background-color: var(--cf-color-surface-raised); }
   .cf-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: var(--cf-text-body-sm-size); line-height: var(--cf-text-body-sm-line-height); font-variant-numeric: tabular-nums; }
   .cf-table th { text-align: left; font-weight: var(--cf-font-weight-semibold); color: var(--cf-color-text-secondary); background-color: var(--cf-color-surface-sunken); padding: var(--cf-space-2-5, 10px) var(--cf-space-4); border-bottom: 1px solid var(--cf-color-border-default); white-space: nowrap; }
   .cf-table td { padding: var(--cf-space-3) var(--cf-space-4); border-bottom: 1px solid var(--cf-color-border-subtle); vertical-align: top; }

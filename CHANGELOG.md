@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 (2026-10-13)
+
+- Fix: wide tables (`cf-table-wrap`) and long code lines (`cf-code-block`) can no longer widen a grid or flex parent on small screens; they scroll inside their own box (`contain: inline-size`).
+
 ## 1.2.0 (2026-10-13)
 
 - Light is now the only active theme by default. The dark theme no longer follows the OS automatically; opt in with `data-theme="dark"` or `data-theme="system"`. The `dark:` Tailwind variant follows the same rule.
