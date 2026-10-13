@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 (2026-10-13)
+
+- New: `cf-code-tabs` (language tabs and copy button bar for code blocks).
+- New: table row headers (`tbody th`) styled like cells.
+- Fix: cards and code blocks can no longer widen a grid track on small screens.
+- Logo wordmark color follows the theme and Marinho bands automatically (`--cf-logo-word`).
+- Dark theme: `surface-inverse` stays Marinho so the reversed logo always works.
+
 ## 1.0.0 (2026-10-13)
 
 - First release of the Selo identity: stamp logo in 4 lockups and 6 color schemes, app icons, favicons, social images.
