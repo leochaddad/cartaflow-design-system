@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 (2026-10-13)
+
+- Fix: `cf-card--interactive` no longer resets text color, which made text invisible on `cf-card--inverse`.
+
 ## 1.1.0 (2026-10-13)
 
 - New: `cf-code-tabs` (language tabs and copy button bar for code blocks).

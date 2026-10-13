@@ -1,6 +1,6 @@
 {
   "name": "@cartaflow/design-system",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "CartaFlow design system: tokens, rules, components, fonts and every logo asset.",
   "license": "UNLICENSED",
   "private": true,
