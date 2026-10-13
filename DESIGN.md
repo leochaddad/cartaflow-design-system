@@ -82,6 +82,7 @@ Status hues are deliberately distinct from the brand red. **Danger is crimson `#
 - Color never carries meaning alone: a status also says it in text, a required field says "obrigatório", a chart legend has labels.
 - Gradients: none in UI. The only allowed pattern is the postmark waves at 6 to 14% opacity.
 - Photos and illustrations sit on `surface-raised` or `surface-sunken` with `radius-xl`, never edge to edge behind text.
+- Exception: illustrations of a customer's own printed material (for example a dental clinic's birthday letter) may use that customer's colors, to show what color printing looks like. Keep them inside a clearly bounded paper shape so they never read as CartaFlow UI.
 
 ---
 
