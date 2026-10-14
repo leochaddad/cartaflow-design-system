@@ -1,4 +1,19 @@
+# dependencies
 node_modules
-.DS_Store
+
+# dist/ is committed on purpose: apps install this package without building it
+
+# environment and secrets (keep only the example)
+.env
+.env.*
+!.env.example
+*.pem
+
+# logs
 *.log
+
+# local tool state
+.DS_Store
 .agents/.cache
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
