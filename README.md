@@ -23,9 +23,14 @@ Tokens, rules, components, fonts and every logo file for CartaFlow. The website,
 
 ## Use it
 
+The package is not on npm. Apps install it from this public repository, at the newest release tag in the range:
+
 ```bash
-npm install @cartaflow/design-system   # or a git/file dependency until it is published
+npm install "github:leochaddad/cartaflow-design-system#semver:^1.2.1"
+npm update @cartaflow/design-system   # later: move to the newest 1.x release (the apps' `npm run update:ds`)
 ```
+
+The lockfile records the exact commit, so every build (Vercel included) installs what was tested. `dist/` is committed, so nothing is built on install. To try unreleased changes in an app before tagging, run `npm run ds:local` there (installs `../cartaflow-design-system` without saving); `npm ci` goes back to the release.
 
 **Next.js + Tailwind v4** (`app/globals.css`):
 
@@ -57,6 +62,7 @@ npm run build        # tokens -> css/tailwind/js, contrast check, React logo dat
 npm run check        # WCAG AA contrast check of every semantic pair, both themes
 npm run build:logos  # regenerate every logo file from logos/src/glyphs.json
 open preview/index.html   # visual reference of tokens and components
+npm run release      # tag the committed version as v<version> and push it, so apps can update
 ```
 
 ## Rules for contributors

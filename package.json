@@ -40,7 +40,8 @@
     "build:tokens": "node scripts/build-tokens.mjs",
     "build:logos": "node scripts/build-logos.mjs",
     "check": "node scripts/check-contrast.mjs",
-    "build:react-logos": "node scripts/build-react-logos.mjs"
+    "build:react-logos": "node scripts/build-react-logos.mjs",
+    "release": "git diff --quiet HEAD && git tag v$npm_package_version && git push origin HEAD v$npm_package_version"
   },
   "peerDependencies": {
     "react": ">=19"
